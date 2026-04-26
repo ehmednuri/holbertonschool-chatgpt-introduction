@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+chmod +x factorial.py
 import sys
 
 def factorial(n):
