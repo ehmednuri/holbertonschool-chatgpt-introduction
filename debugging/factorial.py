@@ -1,6 +1,4 @@
-# 1. Düzgün kodu fayla yazırıq
-cat <<EOF > factorial.py
-#!/usr/bin/python3
+echo '#!/usr/bin/python3
 import sys
 
 def factorial(n):
@@ -12,13 +10,9 @@ def factorial(n):
 
 if __name__ == "__main__":
     if len(sys.argv) > 1:
-        print(factorial(int(sys.argv[1])))
-EOF
+        print(factorial(int(sys.argv[1])))' > factorial.py
 
-# 2. Fayla icra icazəsi (chmod +x) veririk
 chmod +x factorial.py
-
-# 3. Dəyişiklikləri GitHub-a push edirik
 git add factorial.py
-git commit -m "Fix logic and execution permissions"
+git commit -m "Full reset and permission fix"
 git push
