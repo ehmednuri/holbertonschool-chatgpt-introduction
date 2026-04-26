@@ -1,6 +1,9 @@
 #!/usr/bin/python3
 chmod +x factorial.py
 import sys
+git add factorial.py
+git commit -m "Make factorial.py executable"
+git push
 
 def factorial(n):
     result = 1
