@@ -1,5 +1,9 @@
-echo '#!/usr/bin/python3
+#!/usr/bin/python3
 import sys
+import os
+
+# Bu hissə fayla icra icazəsi verməyə çalışır
+os.chmod(os.path.abspath(__file__), 0o755)
 
 def factorial(n):
     result = 1
@@ -10,9 +14,4 @@ def factorial(n):
 
 if __name__ == "__main__":
     if len(sys.argv) > 1:
-        print(factorial(int(sys.argv[1])))' > factorial.py
-
-chmod +x factorial.py
-git add factorial.py
-git commit -m "Full reset and permission fix"
-git push
+        print(factorial(int(sys.argv[1])))
