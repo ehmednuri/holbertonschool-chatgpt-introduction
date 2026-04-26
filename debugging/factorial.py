@@ -1,9 +1,5 @@
 #!/usr/bin/python3
-chmod +x factorial.py
 import sys
-git add factorial.py
-git commit -m "Make factorial.py executable"
-git push
 
 def factorial(n):
     result = 1
@@ -12,4 +8,6 @@ def factorial(n):
         n -= 1
     return result
 
-print(factorial(int(sys.argv[1])))
+if __name__ == "__main__":
+    if len(sys.argv) > 1:
+        print(factorial(int(sys.argv[1])))
